@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['name' => 'Lyon']);
 });
+Route::get('user/index', 'UserController@index');
+
+Route::get('lyon/better', 'BetterController@index');

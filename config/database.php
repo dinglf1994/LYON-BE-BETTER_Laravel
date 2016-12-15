@@ -27,6 +27,7 @@ return [
     */
 
     'default' => env('DB_CONNECTION', 'mysql'),
+//    'default' => 'mysql',
 
     /*
     |--------------------------------------------------------------------------
@@ -54,16 +55,21 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+//            'host' => '127.0.0.1',
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+//            'port' => '3306',
+            'database' => env('DB_DATABASE', 'weibo'),
+//            'database' => 'weibo',
+            'username' => env('DB_USERNAME', 'root'),
+//            'username' => 'root',
+            'password' => env('DB_PASSWORD', 'lfding'),
+//            'password' => 'lfding',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
-            'strict' => true,
-            'engine' => null,
+            'strict' => false,
+//            'engine' => null,
         ],
 
         'pgsql' => [

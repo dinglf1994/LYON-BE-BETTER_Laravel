@@ -6,10 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
+        <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
 
+        <script language="JavaScript" type="text/javascript" src="js/jquery.min.js"></script>
+        <script language="JavaScript" type="text/javascript" src="js/bootstrap.js"></script>
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <!--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">-->
         <!-- Styles -->
         <style>
             html, body {
@@ -49,6 +51,18 @@
                 font-size: 84px;
             }
 
+            .title:hover {
+                color:darkorange;
+            }
+
+            .title-class-2 {
+                font-size: 64px;
+            }
+
+            .title-class-2:hover {
+                color: #259d6d;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -57,6 +71,10 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+            }
+
+            .links > a:hover {
+                color: red;
             }
 
             .m-b-md {
@@ -75,7 +93,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <span class="glyphicon glyphicon-user"></span>
+                    Program And {{ $name }}
+                </div>
+                <div class="title-class-2 m-b-md">
+                    Make A Better World
                 </div>
 
                 <div class="links">
@@ -83,7 +105,7 @@
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="user/index">Lyon</a>
                 </div>
             </div>
         </div>
