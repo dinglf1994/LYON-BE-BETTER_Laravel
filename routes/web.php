@@ -12,8 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome', ['name' => 'Lyon']);
+    return view('bootstrap/index', ['name' => 'Lyon']);
 });
+//
+Route::get('error', function() {
+    return view('errors.503');
+});
+//
 Route::get('user/index', 'UserController@index');
-
+//
 Route::get('lyon/better', 'BetterController@index');
+//
+Route::get('employees', 'EmployeesController@employeesList');
+
