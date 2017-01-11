@@ -4,9 +4,13 @@
 
 @section('sidebar')
     @parent
-    <h1>This is append to the master sidebar</h1>
+    <a href="admin/test">TEST</a>
 @endsection
 
 @section('content')
     <h2>This is my body.</h2>
+@endsection
+
+@section('footer')
+    <h3>this is footer</h3>
 @endsection

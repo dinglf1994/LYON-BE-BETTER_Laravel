@@ -14,14 +14,16 @@ class EmployeesController extends Controller
 {
     protected $employees;
     protected $tangle;
-    public function __construct(Employees $employees, GraphRepository $tangle)
+    protected $circle;
+    public function __construct(Employees $employees, GraphRepository $tangle, GraphRepository $circle)
     {
         $this->tangle = $tangle;
+        $this->circle = $circle;
         $this->employees = $employees;
     }
     public function employeesList()
     {
-        $area = $this->tangle->area();
+        $area = $this->circle->area();
         $employees = $this->_employeesList();
         return view('employees.emplist', ['employees' => $employees, 'area' => $area]);
     }

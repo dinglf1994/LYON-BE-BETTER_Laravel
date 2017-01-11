@@ -30,7 +30,6 @@
             </div>
             </div>
         @show
-
         <div class="container">
             @yield('content')
         </div>

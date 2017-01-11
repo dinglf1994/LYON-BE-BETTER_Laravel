@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Employees;
+use App\Services\Circle;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\GraphRepository;
 use App\Services\Tangle;
@@ -30,8 +32,15 @@ class BaseServiceProvider extends ServiceProvider
             GraphRepository::class,
             Tangle::class
         );
+        $this->app->bind(
+            GraphRepository::class,
+            Circle::class
+        );
         $this->app->when(EmployeesController::class)
-            ->needs(GraphRepository::class)
+            ->needs(GraphRepositoryC::class)
+            ->give(Circle::class);
+        $this->app->when(EmployeesController::class)
+            ->needs(GraphRepositoryT::class)
             ->give(Tangle::class);
     }
 }
